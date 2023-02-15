@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        div.velocidade{
+            border: 1px solid black;
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin: auto;
+        }
+
+        div.vel-59{
+            background-color: rgba(2, 253, 2, 0.493);
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+
+        div.vel-60{
+            background-color: yellow;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+
+        div.vel-80{
+            background-color: orange;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+
+        div.vel-100{
+            background-color: rgba(255, 0, 0, 0.61);
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+
+        div.calculo{
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+
+        div.calculo > input[type = 'button']{
+            font-size:  1em;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    
+    <div class="velocidade">
+        <div class="vel-59">Até 60 km/h: Sem multa</div>
+        <div class="vel-60">Acima de 60 km/h: Multa de R$100,00</div>
+        <div class="vel-80">Acima de 80 km/h: Multa de R$200,00</div>
+        <div class="vel-100">Acima de 100 km/h: Multa de R$300,00</div>
+    </div>
+    
+    <div class="calculo">
+        Velocidade do carro: <input type="number" name="vel" id="vel">
+    </div>
+    <input type="button" value="Verificar" onclick="calcular()">
+
+    <p>Valor da multa abaixo:</p>
+    <div id="valor-multa">
+        Valor da multa:
+    </div>
+    
+
+    <script>
+        function calcular(){
+            var svelocidade = document.getElementById('vel')
+            var multa = document.getElementById('valor-multa')
+            var valor
+
+            if(svelocidade <= 60){
+                valor = 1
+            }
+            else{
+                valor = 2
+            }
+
+           multa.innerText = valor
+            
+        }
+    </script>
+</body>
+</html>
