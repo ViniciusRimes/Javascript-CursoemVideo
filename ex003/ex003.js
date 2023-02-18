@@ -8,17 +8,32 @@ function contar()
     var fimN = Number(fim.value)
     var passoN = Number(passo.value)
 
-    if(inicioN <= fimN){
-        for(inicioN; inicioN <=  fimN; inicioN += passoN)
+    if(inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0)
+    {
+        window.alert("Atenção! Faltam dados a seres digitados. Por favor, verifique e tente novamente!")
+    }else if(passo.value == 0){
+        window.alert("O campo [Passo] deve ter valor positivo e diferente de zero. Tente novamente com outro valor! ")
+    }else{
+        if(inicioN < fimN)
         {
+            while(inicioN <= fimN){
             resultado.innerHTML += `${inicioN}👉`
+            inicioN += passoN
+            }
+        }else{
+            while(inicioN >= fimN){
+            resultado.innerHTML += `${inicioN}👉`
+            inicioN -= passoN
+            }
         }
+
     }
-    
-    if(fimN > inicioN){
-        for(fimN; fimN >= inicioN; fimN -= passoN)
-        { 
-            resultado.innerHTML += `${fimN}👉`
-        }
-    }
+
+    resultado.innerHTML += `🏁`
+
+}
+
+function limpar()
+{
+    resultado.innerHTML = 'Contando:'
 }
