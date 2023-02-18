@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(78, 126, 189);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+header{
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+
+section{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.493) ;
+}
+
+div#numeros{
+    padding: 10px;
+}
+
+div#numeros > p{
+    padding-top: 5px;
+}
+div#resultado{
+    padding: 10px;
+}
+footer{
+    color: white;
+    text-align: center;
+}
