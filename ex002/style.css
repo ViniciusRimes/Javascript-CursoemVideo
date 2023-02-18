@@ -29,11 +29,15 @@ div#res{
     text-align: center;
 }
 
-div#res > img#foto{
+div > img#imagem{
     padding-top: 10px;
-    width: 500px;
-    height: 250px;
-    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
 }
 
 footer{
